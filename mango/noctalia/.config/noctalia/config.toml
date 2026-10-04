@@ -1,0 +1,117 @@
+[bar.default]
+background_opacity = 1.0
+center = [ "workspaces", "Spacer_2", "media" ]
+end = [
+    "tray",
+    "Spacer_2",
+    "notifications",
+    "clipboard",
+    "recorder",
+    "Spacer_2",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "Spacer_2",
+    "date",
+    "clock",
+    "Spacer_2",
+    "session",
+    "Spacer"
+]
+margin_edge = 0
+margin_ends = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
+radius_top_left = 0
+radius_top_right = 0
+start = [ "Spacer", "launcher", "Spacer_2", "active_window" ]
+thickness = 40
+
+[wallpaper.default]
+# Set a wallpaper path here if desired.
+# path = "~/.local/share/wallpaper/osaka-jade-bg.jpg"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.screen-off]
+    action = "screen-off"
+    enabled = true
+    timeout = 300.0
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "suspend"
+    enabled = true
+    lock_before_suspend = false
+    timeout = 900.0
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+[plugin_settings."noctalia/screen_recorder"]
+restore_portal = false
+
+[plugins]
+enabled = [ "noctalia/screen_recorder" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+polkit_agent = true
+settings_show_advanced = true
+
+    [shell.animation]
+    enabled = false
+
+[theme]
+builtin = "Noctalia"
+mode = "dark"
+source = "builtin"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "qt" ]
+
+[widget.Spacer]
+length = 10
+type = "spacer"
+
+[widget.Spacer_2]
+type = "spacer"
+
+[widget.date]
+format = "{:%a %d %b -}"
+
+[widget.launcher]
+scale = 1.45
+
+[widget.network]
+show_label = false
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.workspaces]
+anchor = true
+show_labels = false

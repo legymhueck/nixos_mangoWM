@@ -1,6 +1,9 @@
 { lib, pkgs, ... }:
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./mango-system.nix
+  ];
 
   system.stateVersion = "26.05";   # use the value generated above, never bump it
 
