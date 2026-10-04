@@ -48,7 +48,6 @@
     settings = {
       main = {
         font = "JetBrains Mono NL:size=13";
-        include = "${pkgs.foot}/share/foot/themes/dracula-iterm";
       };
       scrollback.lines = 0;
     };
