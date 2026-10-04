@@ -148,7 +148,10 @@ in
       ./mango/doublecmd/.config/doublecmd/doublecmd.xml;
     "gtk-3.0/gtk.css".source = ./mango/gtk-3.0/.config/gtk-3.0/gtk.css;
     "gtk-3.0/settings.ini".source = ./mango/gtk-3.0/.config/gtk-3.0/settings.ini;
-    "gtk-4.0/gtk.css".source = ./mango/gtk-4.0/.config/gtk-4.0/gtk.css;
+    "gtk-4.0/gtk.css" = {
+      source = ./mango/gtk-4.0/.config/gtk-4.0/gtk.css;
+      force = true;
+    };
     "gtk-4.0/settings.ini".source = ./mango/gtk-4.0/.config/gtk-4.0/settings.ini;
     "kitty/kitty.conf".source = ./mango/kitty/.config/kitty/kitty.conf;
     "kitty/dank-tabs.conf".source = ./mango/kitty/.config/kitty/dank-tabs.conf;
