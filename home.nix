@@ -220,12 +220,13 @@
       animation_curve_opafadein = "0.0, 0.0, 1.0, 1.0";
       tagrule = lib.genList (n: "id:${toString n}, layout_name:scroller") 9;
       scroller_structs = 0;
-      scroller_default_proportion = 0.5;
+      scroller_default_proportion = 1.0;
       scroller_focus_center = 0;
       scroller_prefer_center = 0;
       scroller_prefer_overspread = 1;
       edge_scroller_pointer_focus = 1;
-      scroller_default_proportion_single = 2.0;
+      scroller_ignore_proportion_single = 0;
+      scroller_default_proportion_single = 1.0;
       scroller_proportion_preset = "0.5, 0.8, 1.0";
       new_is_master = 1;
       default_mfact = 0.55;
@@ -236,15 +237,7 @@
         "NONE,btn_middle,togglemaximizescreen,0"
         "SUPER,btn_right,moveresize,curresize"
       ];
-      windowrule = [
-        "isfloating:1, appid:[Ss]team"
-        "isfloating:0, title:Steam"
-        "isfloating:1, appid:steam, title:Steam Settings"
-        "scroller_proportion:0.75, appid:librewolf"
-        "scroller_proportion:0.75, appid:^Mullvad Browser$"
-        "scroller_proportion:0.5, appid:firefox"
-        "scroller_proportion:0.75, appid:foot"
-      ];
+      windowrule = [ ];
       layerrule = [ "noanim:1, noblur:1, layer_name:selection" ];
       allow_tearing = 2;
       syncobj_enable = 1;
@@ -257,7 +250,7 @@
         "SUPER,comma,spawn,noctalia msg settings-toggle"
         "SUPER,Return,spawn,foot"
         "SUPER,e,spawn,nautilus"
-        "SUPER,w,spawn,librewolf"
+        "SUPER,w,spawn,firefox"
         "SUPER+SHIFT,Return,spawn,doublecmd"
         "SUPER,q,killclient,"
         "SUPER+CTRL,q,quit"
@@ -282,7 +275,7 @@
         "SUPER+SHIFT,I,restore_minimized"
         "SUPER,z,toggle_scratchpad"
         "SUPER+SHIFT,e,set_proportion,1.0"
-        "SUPER,x,switch_proportion_preset,"
+        "SUPER,x,set_proportion,0.5"
         "SUPER,n,switch_layout"
         "SUPER+ALT,s,setlayout,scroller"
         "SUPER,Tab,focusstack,next"
