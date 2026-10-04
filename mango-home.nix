@@ -125,6 +125,7 @@ in
   fonts.fontconfig.enable = true;
 
   home.sessionVariables.QT_QPA_PLATFORMTHEME = "qt6ct";
+  home.sessionVariables.SAL_USE_VCLPLUGIN = "gtk3";
 
   home.file = {
     ".bash_profile".source = ./mango/home/.bash_profile;

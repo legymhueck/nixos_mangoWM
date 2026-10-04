@@ -47,6 +47,13 @@
     xdg-desktop-portal-wlr
     xdg-utils
     xwayland
+    (runCommand "breeze-red-cursor-theme" { } ''
+      mkdir -p "$out/share/icons"
+      ln -s ${./mango/icons/.local/share/icons/Breeze_Red} \
+        "$out/share/icons/Breeze_Red"
+      ln -s ${./mango/icons/.local/share/icons/default} \
+        "$out/share/icons/default"
+    '')
   ];
 
   services.printing.enable = true;

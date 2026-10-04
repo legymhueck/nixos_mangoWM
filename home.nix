@@ -156,7 +156,10 @@
       layer_animations = 0;
       animation_fade_in = 0;
       animation_fade_out = 0;
-      env = [ "QT_QPA_PLATFORMTHEME,qt6ct" ];
+      env = [
+        "QT_QPA_PLATFORMTHEME,qt6ct"
+        "SAL_USE_VCLPLUGIN,gtk3"
+      ];
 
       gappih = 0;
       gappiv = 0;
